@@ -13,13 +13,22 @@
     <title>Careers - Smart-flow</title>
     <!-- Shared external stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Embedded CSS: one page-specific rule that only jobs.html needs -->
+    <style>
+        /* Make each job's reference number stand out so applicants can copy it */
+        .job-facts dd:first-of-type {
+            font-weight: bold;
+            letter-spacing: 0.1em;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Page header: page title and tagline-->
     <header>
         <h1>Careers at Smart-flow</h1>
-        <p>Help councils build the digital backbone of smarter cities.</p>
+        <p style="font-style: italic;">Help councils build the digital backbone of smarter cities.</p>
     </header>
 
     <!-- Navigation menu, shared across all pages -->
@@ -36,7 +45,7 @@
     <main>
         <!-- Introduction to current vacancies -->
         <section class="jobs-intro">
-            <h2>Current Vacancies</h2>
+            <h2>Current vacancies</h2>
             <p>Smart-flow works with local councils and industry partners to design and build the digital platforms
                 behind smart transport, energy monitoring and urban services. We are growing our Digital Platforms and
                 Data &amp; Insights teams, and looking for people who want to see their work used by real communities.
@@ -47,7 +56,22 @@
 
         <!-- Sidebar: placed before the listings so it floats right beside them-->
         <aside class="jobs-aside">
+            <h2>Why work with us</h2>
+            <p>Smart-flow is a Melbourne-based team of about 40 engineers, designers and urban planners. Our platforms
+                are used by more than a dozen Victorian councils, so the work you do here shows up in real streets and
+                buildings.</p>
 
+            <h3>What we offer</h3>
+            <ul>
+                <li>Hybrid working and flexible hours</li>
+                <li>$2,000 annual professional development budget</li>
+                <li>Two paid volunteering days a year with community partners</li>
+                <li>Modern office near Southern Cross Station</li>
+            </ul>
+
+            <h3>Questions?</h3>
+            <p>Email <a href="mailto:careers@smart-flow.com">careers@smart-flow.com</a> and our recruitment team will
+                get back to you within two business days.</p>
         </aside>
 
         <!-- Job 1: Front-End Web Developer -->
@@ -151,7 +175,12 @@
 
     <!-- Footer with jira, Github and contact links -->
     <footer>
-
+        <p>&copy; 2026 Smart-flow Pty Ltd. Website built by Group G02 for C0S10026 Web Technology Project.</p>
+        <ul>
+            <li><a href="https://github.com/106214551/Smart-flow">GitHub repository</a></li>
+            <li><a href="#">Jira project board</a></li>
+            <li><a href="mailto:info@smart-flow.com.au">info@smart-flow.com.au</a></li>
+        </ul>
     </footer>
 
 </body>
