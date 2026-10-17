@@ -1,0 +1,125 @@
+/* === Apply page form layout === */
+
+/* === Apply page title === */
+#titleapply {
+  text-align: center;
+  margin-bottom: 24px;
+}
+/* === Form container: Flexbox layout + bordered box === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* === Individual field groups: label stacked above input === */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* === Accessibility: visible focus outlines for keyboard navigation === */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid #0057b7;
+  outline-offset: 2px;
+}
+
+/* === Fieldsets: Gender and Skills grouped inputs === */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 6px;
+}
+
+fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 16px;
+  font-weight: normal;
+  white-space: nowrap;
+  cursor: pointer;
+}
+fieldset .radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+/* === Submit button styling === */
+button[type="submit"] {
+  background-color: #0057b7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #003d82;
+}
+
+/* === Responsive layout: full-width form on small screens === */
+@media (max-width: 600px) {
+  form {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+
+/* === Global font === */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === Checkbox grid layout (Skills) === */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-item label {
+  cursor: pointer;
+}
+
+/* === Required field indicator: red asterisk === */
+.required-star {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* === Form introduction text: centered and limited width === */
+.form-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 16px auto;
+}

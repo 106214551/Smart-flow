@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Smart Flow">
+    <meta name="description" content="Job Application Page for Smart Flow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply - Smart Flow</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+    .form-note {
+        font-style: italic;
+        color: #555;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    </style>
+</head>
+<body>
+    <!-- visible title -->
+<h1 id="titleapply">Apply for a position</h1>
+
+<!-- visible description -->
+<p class="form-intro">Please fill out the form below to apply for a position at Smart Flow. Ensure all required fields are completed before submitting your application.</p>
+<p class="form-note">Fields marked with an <span style="color: #c0392b; font-weight: bold;">asterisk (*)</span> are required.</p>
+
+<!-- form to submit job application -->
+<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+    <!-- Job reference and applicant name -->
+    <div class="form-group">
+        <label for="jobref">Job Reference Number <span class="required-star">*</span></label>
+        <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{5}"
+        title="Enter exactly 5 letters or digits" placeholder="e.g. AB123" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="firstname">First Name <span class="required-star">*</span></label>
+        <input type="text" id="firstname" name="firstname"
+        maxlength="20" pattern="[A-Za-z]+" title="Enter only letters, no spaces or numbers" 
+        placeholder="e.g. John" required>
+    </div>
+
+    <div class="form-group">
+        <label for="lastname">Last Name <span class="required-star">*</span></label>
+        <input type="text" id="lastname" name="lastname"
+        maxlength="20" pattern="[A-Za-z]+" title="Enter only letters, no spaces or numbers" 
+        placeholder="e.g. Smith" required>
+    </div>
+
+    <!-- Date of birth and gender -->
+    <div class="form-group">
+        <label for="DOB">Date of Birth <span class="required-star">*</span></label>
+        <input type="date" id="DOB" name="DOB" required>
+    </div>
+
+    <fieldset>
+        <legend>Gender <span class="required-star">*</span></legend>
+        <div class="radio-group">
+            <div class="checkbox-item">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- Address details -->
+    <div class="form-group">
+        <label for="street">Street Address <span class="required-star">*</span></label>
+        <input type="text" id="street" name="street" maxlength="40" placeholder="e.g. 123 Main Street" required>
+    </div>
+
+    <div class="form-group">
+        <label for="suburb">Suburb/Town <span class="required-star">*</span></label>
+        <input type="text" id="suburb" name="suburb" maxlength="40" placeholder="e.g. Melbourne" required>
+    </div>
+
+    <div class="form-group">
+        <label for="state">State <span class="required-star">*</span></label>
+        <select id="state" name="state" required>
+            <option value="" disabled selected>-- Select a state --</option>
+            <option value="VIC">VIC</option>
+            <option value="NSW">NSW</option>
+            <option value="QLD">QLD</option>
+            <option value="NT">NT</option>
+            <option value="WA">WA</option>
+            <option value="SA">SA</option>
+            <option value="TAS">TAS</option>
+            <option value="ACT">ACT</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="postcode">Postcode <span class="required-star">*</span></label>
+        <input type="text" id="postcode" name="postcode" pattern="[0-9]{4}" title="Enter exactly 4 digits" 
+        placeholder="e.g. 3000" required>
+    </div>
+
+     <!-- Contact details -->
+    <div class="form-group">
+        <label for="email">Email <span class="required-star">*</span></label>
+        <input type="email" id="email" name="email" placeholder="e.g. name@example.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number <span class="required-star">*</span></label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" title="Enter 8 to 12 digits" placeholder="e.g. 0412345678" required>
+    </div>
+
+    <!-- Skills -->
+    <fieldset>
+
+        <legend>Skills</legend>
+         <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="skill-gis" name="skills" value="GIS Mapping">
+                <label for="skill-gis">GIS & Spatial Mapping</label>
+            </div>
+
+            <div class="checkbox-item">
+                <input type="checkbox" id="skill-iot" name="skills" value="IoT Systems">
+                <label for="skill-iot">IoT Systems & Sensor Networks</label>
+            </div>
+
+            <div class="checkbox-item">
+                <input type="checkbox" id="skill-dataviz" name="skills" value="Data Visualisation">
+                <label for="skill-dataviz">Data Visualisation & Dashboards</label>
+            </div>
+
+            <div class="checkbox-item">
+                <input type="checkbox" id="skill-webdev" name="skills" value="Web Development">
+                <label for="skill-webdev">Web Development (HTML/CSS/JS)</label>
+            </div>
+  
+            <div class="checkbox-item">
+                <input type="checkbox" id="skill-transport" name="skills" value="Transport Planning">
+                <label for="skill-transport">Transport & Mobility Planning</label>
+            </div>
+
+            <div class="checkbox-item">
+                <input type="checkbox" id="skill-energy" name="skills" value="Energy Systems">
+                <label for="skill-energy">Energy Monitoring Systems</label>
+            </div>
+
+            <div class="checkbox-item">
+                <input type="checkbox" id="skill-stakeholder" name="skills" value="Stakeholder Engagement">
+                <label for="skill-stakeholder">Council/Stakeholder Engagement</label>
+            </div>
+
+            <div class="checkbox-item">
+                <input type="checkbox" id="skill-project" name="skills" value="Project Management">
+                <label for="skill-project">Project Management</label>
+            </div>
+        </div>
+
+    </fieldset>
+
+    <!-- Other skills text area -->
+    <div class="form-group">
+        <label for="otherskills">Other Skills</label>
+        <textarea id="otherskills" name="otherskills" rows="4" cols="50" placeholder="e.g. Project coordination, public speaking, data analysis software (SPSS, Tableau)"></textarea>
+    </div>
+    <!-- Submit button -->
+    <div class="form-group">
+        <button type="submit">Submit Application</button>
+    </div>
+</form>
+</body>
+</html>
