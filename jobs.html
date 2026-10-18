@@ -33,24 +33,38 @@
         from the unit's Accessibility Guideline (Zarnegar, Swinburne University).
     -->
 
-    <!-- Page header: page title and tagline-->
-    <header>
-        <h1>Careers at Smart-flow</h1>
-        <p style="font-style: italic;">Help councils build the digital backbone of smarter cities.</p>
-    </header>
+    <!-- 1. Header and Navigation (shared across all pages) -->
+    <header class="site-header">
+        <div class="container header-content">
 
-    <!-- Navigation menu, shared across all pages -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="apply.html">Apply</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
+            <!-- Company logo and name -->
+            <a href="index.html" class="brand">
+                <img src="images/smart flow.jpeg" alt="Smart Flow logo" width="48" height="48">
+                <span>
+                    <strong>Smart Flow</strong>
+                    <small>Smarter Cities. Better Living.</small>
+                </span>
+            </a>
+
+            <!-- Navigation menu -->
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html" class="active" aria-current="page">Jobs</a></li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
 
     <!-- Main content section: job listings -->
     <main>
+        <!-- Page title and tagline -->
+        <h1>Careers at Smart-flow</h1>
+        <p style="font-style: italic;">Help councils build the digital backbone of smarter cities.</p>
+
         <!-- Introduction to current vacancies -->
         <section class="jobs-intro">
             <h2>Current vacancies</h2>
