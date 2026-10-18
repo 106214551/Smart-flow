@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--
+  about.html - About Us page
+  Group: G02 - Smart City Infrastructure Consultancy
+  Author: Khadija Boussaha ([Your student ID])
+  Description: Introduces the team: group and class details, each member's
+               contribution and quote, a group photo and a fun facts table.
+  Last updated: October 2026
+-->
+<html lang="en-AU">
+<head>
+  <!-- ===== Page metadata ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Smart Flow (G02), the team behind the CivicGrid Consulting website: our members, contributions, quotes and fun facts.">
+  <meta name="keywords" content="about us, team, Smart Flow, G02, CivicGrid, COS10026">
+  <meta name="author" content="Khadija Boussaha">
+  <title>About Us | CivicGrid Consulting</title>
+
+  <!-- External stylesheet shared by every page -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- ===== Embedded CSS example (required on every page) =====
+       Styles the English translation under each quote, used only on this page. -->
+  <style>
+    .translation {
+      color: #4a5568;
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== Header and shared navigation (same on every page) ===== -->
+  <header>
+    <p class="site-name">CivicGrid Consulting</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="about.html" aria-current="page">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>About Our Team</h1>
+    <p>
+      We are Smart Flow, a team of five students who designed and built the CivicGrid Consulting
+      website for COS10026 Web Technology at Swinburne University.
+    </p>
+
+    <!-- ===== Group details: NESTED LIST (required) =====
+         A list inside a list item groups the class details together. -->
+    <section aria-labelledby="group-heading">
+      <h2 id="group-heading">Our Group</h2>
+      <ul class="group-info">
+        <li><strong>Group name:</strong> G02 - Smart Flow</li>
+        <li><strong>Class details:</strong>
+          <ul>
+            <li>Sunday: 9:00 am to 10:30 am</li>
+            <li>Tuesday: 9:00 am to 11:00 am</li>
+            <li>Tutor: Dr Hamada</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Members: DEFINITION LIST (required) =====
+         dt = member name and student ID
+         dd = their contribution, then their quote
+         Each quote uses the lang attribute so screen readers pronounce it correctly.
+         Examples: lang="ar" for Arabic, lang="hi" for Hindi, lang="zh" for Chinese,
+         lang="vi" for Vietnamese. Right-to-left languages such as Arabic and Urdu
+         also need dir="rtl".
+         The quotes below are set to Arabic (lang="ar" dir="rtl") as a starting
+         point. Change lang and dir for anyone whose first language is different
+         (e.g. lang="fr" with no dir for French). -->
+    <section aria-labelledby="members-heading">
+      <h2 id="members-heading">Members, Contributions and Quotes</h2>
+      <dl class="members">
+        <!-- Member 1 -->
+        <dt>Mohammed Sami Aljattal <span class="student-id">[Student ID]</span></dt>
+        <dd><strong>Contribution:</strong> Home page (index.html) and its CSS, including the background graphic, merged-cell table, search box and footer links.</dd>
+        <dd>
+          <blockquote lang="ar" dir="rtl">
+            <p>[Quote in first language]</p>
+          </blockquote>
+          <p class="translation">Translation: "[English translation]"</p>
+        </dd>
+
+        <!-- Member 2 -->
+        <dt>Malik Al Badri <span class="student-id">[Student ID]</span></dt>
+        <dd><strong>Contribution:</strong> Jobs page (jobs.html) and its CSS, including job research and the floated aside.</dd>
+        <dd>
+          <blockquote lang="ar" dir="rtl">
+            <p>[Quote in first language]</p>
+          </blockquote>
+          <p class="translation">Translation: "[English translation]"</p>
+        </dd>
+
+        <!-- Member 3 -->
+        <dt>Rabie Abdullah <span class="student-id">[Student ID]</span></dt>
+        <dd><strong>Contribution:</strong> Application page (apply.html) and its CSS, including form validation and the Flexbox/Grid form layout.</dd>
+        <dd>
+          <blockquote lang="ar" dir="rtl">
+            <p>[Quote in first language]</p>
+          </blockquote>
+          <p class="translation">Translation: "[English translation]"</p>
+        </dd>
+
+        <!-- Member 4 -->
+        <dt>Khadija Boussaha <span class="student-id">[Student ID]</span></dt>
+        <dd><strong>Contribution:</strong> About page (about.html) and its CSS, including the team details, group photo and fun facts table. Also set up and managed the team's Jira board (epics, user stories, tasks and sprints).</dd>
+        <dd>
+          <blockquote lang="ar" dir="rtl">
+            <p>[Quote in first language]</p>
+          </blockquote>
+          <p class="translation">Translation: "[English translation]"</p>
+        </dd>
+
+        <!-- Member 5 -->
+        <dt>Sara Kneina <span class="student-id">[Student ID]</span></dt>
+        <dd><strong>Contribution:</strong> Shared stylesheet (styles.css), including the site-wide colours, navigation, responsive layout and accessibility styles, plus final validation checks and GitHub Pages deployment.</dd>
+        <dd>
+          <blockquote lang="ar" dir="rtl">
+            <p>[Quote in first language]</p>
+          </blockquote>
+          <p class="translation">Translation: "[English translation]"</p>
+        </dd>
+      </dl>
+    </section>
+
+    <!-- ===== Group photo: FIGURE with caption (required) =====
+         Keep the image under 300KB (compress it at squoosh.app).
+         width and height stop the page jumping while the image loads. -->
+    <section aria-labelledby="photo-heading">
+      <h2 id="photo-heading">Our Team Photo</h2>
+      <figure class="group-photo">
+        <img src="images/group-photo.jpg"
+             alt="The five Smart Flow team members standing together and smiling"
+             width="800" height="533">
+        <figcaption>The Smart Flow team (G02), October 2026.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== Fun facts: TABLE with caption (required) =====
+         scope="col" and scope="row" tell screen readers which header
+         belongs to each cell. The wrapper lets the table scroll on phones. -->
+    <section aria-labelledby="facts-heading">
+      <h2 id="facts-heading">Fun Facts</h2>
+      <div class="table-wrapper" tabindex="0" role="region" aria-labelledby="facts-caption">
+        <table class="fun-facts">
+          <caption id="facts-caption">Fun facts about each team member</caption>
+          <thead>
+            <tr>
+              <th scope="col">Member</th>
+              <th scope="col">Dream job</th>
+              <th scope="col">Favourite coding snack</th>
+              <th scope="col">Hometown</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Mohammed Sami Aljattal</th>
+              <td>[Dream job]</td>
+              <td>[Snack]</td>
+              <td>[Hometown]</td>
+            </tr>
+            <tr>
+              <th scope="row">Malik Al Badri</th>
+              <td>[Dream job]</td>
+              <td>[Snack]</td>
+              <td>[Hometown]</td>
+            </tr>
+            <tr>
+              <th scope="row">Rabie Abdullah</th>
+              <td>[Dream job]</td>
+              <td>[Snack]</td>
+              <td>[Hometown]</td>
+            </tr>
+            <tr>
+              <th scope="row">Khadija Boussaha</th>
+              <td>[Dream job]</td>
+              <td>[Snack]</td>
+              <td>[Hometown]</td>
+            </tr>
+            <tr>
+              <th scope="row">Sara Kneina</th>
+              <td>[Dream job]</td>
+              <td>[Snack]</td>
+              <td>[Hometown]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== Acknowledgement of Country, explained in context =====
+         The brief requires one meaningful element that acknowledges or supports
+         Aboriginal and Torres Strait Islander peoples, clearly explained (not decorative).
+         This section gives the acknowledgement AND explains why we included it. -->
+    <section aria-labelledby="country-heading" class="acknowledgement">
+      <h2 id="country-heading">Acknowledgement of Country</h2>
+      <p>
+        We respectfully acknowledge the Wurundjeri People of the Kulin Nation, the Traditional
+        Owners of the land on which Swinburne University of Technology's Australian campuses stand.
+        We pay our respects to their Elders past and present.
+      </p>
+
+      <h3>Why we included this</h3>
+      <p>
+        Our team studies a Swinburne course, so we wanted to recognise the Traditional Owners of the
+        land where our university began. An Acknowledgement of Country recognises Aboriginal and
+        Torres Strait Islander peoples as the Traditional Owners of the land and shows respect for
+        their continuing connection to Country (Reconciliation Australia, n.d.).
+      </p>
+      <p>
+        It also fits the company we designed. Smart city projects change how land, streets and public
+        spaces are used. CivicGrid Consulting therefore commits to:
+      </p>
+      <ul>
+        <li>talking with Traditional Owners early in every council project;</li>
+        <li>encouraging applications from Aboriginal and Torres Strait Islander peoples for all roles;</li>
+        <li>designing digital services that are accessible to everyone in the community.</li>
+      </ul>
+    </section>
+
+    <!-- ===== Acknowledgements / references (marked in the rubric) ===== -->
+    <section aria-labelledby="credits-heading">
+      <h2 id="credits-heading">Acknowledgements and References</h2>
+      <p>Group photo: taken by the Smart Flow team. Used with the permission of all members.</p>
+
+      <!-- GenAI acknowledgement: the brief states that not crediting GenAI is plagiarism -->
+      <h3>Use of generative AI</h3>
+      <p>
+        I used Claude, an AI assistant made by Anthropic, for guidance while building this page. It
+        explained the assessment requirements, showed me how to set up my project in VS Code and Jira,
+        and provided a starting draft of the HTML and CSS, which I then reviewed, edited, tested and
+        learned to explain. The team members' details, quotes and photo are our own.
+      </p>
+      <h3>References (APA 7)</h3>
+      <ul class="references">
+        <li>
+          Reconciliation Australia. (n.d.). <cite>Acknowledgement of Country and Welcome to Country</cite>.
+          <a href="https://www.reconciliation.org.au/reconciliation/acknowledgement-of-country-and-welcome-to-country/">https://www.reconciliation.org.au/reconciliation/acknowledgement-of-country-and-welcome-to-country/</a>
+        </li>
+        <li>
+          Anthropic. (2026). <cite>Claude</cite> (Opus 5.5 version) [Large language model].
+          <a href="https://claude.ai">https://claude.ai</a>
+        </li>
+        <li>
+          Swinburne University of Technology. (n.d.). <cite>Acknowledgement of Country</cite>.
+          <a href="https://www.swinburne.edu.au/about/strategy-initiatives/moondani-toombadool-centre/acknowledgement/">https://www.swinburne.edu.au/about/strategy-initiatives/moondani-toombadool-centre/acknowledgement/</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===== Shared footer (same on every page) ===== -->
+  <footer>
+    <!-- Inline CSS example (required on every page) -->
+    <p style="font-style: italic;">
+      CivicGrid Consulting acknowledges the Wurundjeri Woi-wurrung people of the Kulin Nation,
+      the Traditional Owners of the land on which we work.
+    </p>
+    <p>
+      <a href="https://YOUR-JIRA-LINK">Jira project</a> |
+      <a href="https://github.com/YOUR-REPO">GitHub repository</a> |
+      <a href="mailto:info@civicgrid.com.au">info@civicgrid.com.au</a>
+    </p>
+    <p>&copy; 2026 CivicGrid Consulting. Student project for COS10026, Swinburne University.</p>
+  </footer>
+</body>
+</html>

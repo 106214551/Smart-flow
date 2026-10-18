@@ -1,0 +1,173 @@
+/* =========================================================
+   ABOUT PAGE (about.html)
+   Author: Khadija Boussaha
+   Paste this section into the group's shared styles/styles.css.
+   Brief requirements covered: styled student IDs, bordered figure,
+   styled table with hex colours and hover effects.
+   ========================================================= */
+
+/* Nested list: indent the inner list so it reads as part of "Class details" */
+.group-info ul {
+  margin-top: 0.3rem;
+  padding-left: 1.5rem;
+  list-style-type: circle;
+}
+
+/* ----- Members definition list ----- */
+.members dt {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d0d7de;
+}
+
+.members dd {
+  margin-left: 0;
+  margin-top: 0.5rem;
+}
+
+/* REQUIRED: styled student IDs, shown as a small badge */
+.student-id {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #0b6e4f;
+  border-radius: 4px;
+}
+
+/* Quotes: a coloured bar on the side marks them as quotations */
+.members blockquote {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #0b6e4f;
+  background-color: #f4faf7;
+  font-style: italic;
+}
+
+.members blockquote p {
+  margin: 0;
+}
+
+/* Right-to-left quotes (e.g. Arabic) put the bar on the right side */
+.members blockquote[dir="rtl"] {
+  border-left: none;
+  border-right: 4px solid #0b6e4f;
+}
+
+/* ----- REQUIRED: bordered figure ----- */
+.group-photo {
+  max-width: 800px;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  border: 3px solid #0b6e4f;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Image shrinks with the screen and never overflows (responsive) */
+.group-photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.group-photo figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+/* ----- REQUIRED: styled table with hex colours and hover effects ----- */
+
+/* Wrapper lets the table scroll sideways on narrow screens */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table-wrapper:focus-visible {
+  outline: 3px solid #f0b46b;
+}
+
+.fun-facts {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+.fun-facts caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.fun-facts th,
+.fun-facts td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #c3d9cf;
+  text-align: left;
+}
+
+/* Header row: dark green with white text (contrast ratio above 4.5:1) */
+.fun-facts thead th {
+  background-color: #0b6e4f;
+  color: #ffffff;
+}
+
+/* Zebra stripes make rows easier to follow */
+.fun-facts tbody tr:nth-child(even) {
+  background-color: #eaf6f1;
+}
+
+/* Hover effect: highlight the row under the mouse */
+.fun-facts tbody tr:hover {
+  background-color: #fff4e5;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect on a single cell */
+.fun-facts tbody td:hover {
+  background-color: #f0b46b;
+  color: #1a1a1a;
+}
+
+/* ----- Acknowledgement of Country section ----- */
+.acknowledgement {
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #fdf6ec;
+  border-left: 6px solid #8a4b00;
+  border-radius: 4px;
+}
+
+/* References: long web addresses wrap instead of overflowing on phones */
+.references a {
+  overflow-wrap: anywhere;
+}
+
+/* ----- Responsive: smaller screens ----- */
+@media (max-width: 600px) {
+  .student-id {
+    display: block;
+    width: fit-content;
+    margin: 0.3rem 0 0 0;
+  }
+
+  .group-photo {
+    padding: 0.4rem;
+  }
+}
+
+/* ----- Accessibility: respect users who turn off animations ----- */
+@media (prefers-reduced-motion: reduce) {
+  .fun-facts tbody tr:hover {
+    transition: none;
+  }
+}
