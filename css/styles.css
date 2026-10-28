@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Smart-flow | COS10026 Group G02 | styles.css
+   
+   Author: Sara Kneina 106214551
+   
+   AI Acknowledgement: 
+   All core requirements taught in the unit were written by the user. 
+   Generative AI (Claude) was only used as a learning tool to explain 
+   advanced concepts (such as glassmorphism effects, backdrop-filters, 
+   and CSS Grid auto-fit). The AI did not write the code; it explained 
+   how the properties work, and the user implemented and tested them.
+
+   styles.css  (SHARED STYLES)
+   Loaded on every page. Each page then loads its own small file:
+   index.css, jobs.css, apply.css or about.css.
+
+   Contents: 1 Colours and base | 2 Header and navigation | 3 Footer
+             4 Glass panels      | 5 Buttons | 6 Tables
+             7 Hover effects     | 8 Responsive | 9 Accessibility
+  */
+
+/* 1. COLOURS AND BASE ---------------------------------------------------- */
+/* Custom properties: change a colour here and the whole site updates */
+:root {
+  --navy: #102b4d;        /* logo navy */
+  --teal: #00a9a5;        /* logo teal */
+  --teal-dark: #087f88;   /* darker teal: passes contrast on white */
+  --text: #23415e;
+  --shadow: 0 1rem 2.5rem rgba(20, 73, 111, .14);
+}
+
+* { box-sizing: border-box; }   /* padding and border stay inside the width */
+
+/* Background colour + background graphic made only from gradients */
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background:
+    radial-gradient(ellipse at 10% 5%, #ffffff, transparent 30rem),
+    linear-gradient(135deg, #d9f2ff, #a6e0f4 45%, #eafbf8);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 { color: var(--navy); }
+a { color: var(--teal-dark); }
+a:hover { color: var(--navy); }
+
+.container { width: min(74rem, 92%); margin-inline: auto; }  /* centred page width */
+.page-main { padding: 2rem 0 3rem; }
+.eyebrow { margin: 0 0 .5rem; color: var(--teal-dark); font-size: .75rem; font-weight: 800; letter-spacing: .17em; }
+
+/* 2. HEADER AND NAVIGATION (same on every page) -------------------------- */
+.site-header { padding-top: 1.25rem; }
+
+.header-content {
+  display: flex;                    /* Flexbox: logo left, menu right */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: .75rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, .9);
+  border-radius: 999px;
+  background: rgba(240, 250, 255, .6);
+  box-shadow: 0 .75rem 2rem rgba(31, 101, 144, .13), inset 0 2px 2px #fff;
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  backdrop-filter: blur(24px) saturate(150%);     /* the frosted-glass blur */
+}
+
+.brand { display: flex; align-items: center; gap: .75rem; color: var(--navy); text-decoration: none; }
+.brand img { width: 3.4rem; height: 3.4rem; object-fit: contain; border-radius: 50%; background: #fff; }
+.brand-copy { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-copy strong { font-size: 1.3rem; letter-spacing: -.04em; }
+.brand-copy span, .footer-brand span { color: var(--teal); }   /* teal "-flow" */
+.brand-copy small { color: #4f6a80; font-size: .72rem; }
+
+.nav-links { display: flex; flex-wrap: wrap; gap: .3rem; margin: 0; padding: 0; list-style: none; }
+.nav-links a {
+  display: block;
+  padding: .6rem 1.2rem;
+  border-radius: 999px;
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .2s, background .2s;
+}
+.nav-links a:hover { background: rgba(255, 255, 255, .75); transform: translateY(-2px); }   /* hover lift */
+.nav-links a.active { color: #fff; background: linear-gradient(135deg, #08aaa6, #087d9d); }  /* current page */
+
+/* 3. FOOTER (Jira, GitHub, live site and email links live here) ---------- */
+.site-footer { padding: 1.5rem 0; border-top: 1px solid rgba(255, 255, 255, .7); }
+.footer-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.footer-brand { color: var(--navy); font-size: 1.1rem; font-weight: 800; text-decoration: none; }
+.footer-content p { margin: 0; font-size: .8rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; margin: 0; padding: 0; list-style: none; }
+.footer-links a { color: var(--text); font-size: .85rem; }
