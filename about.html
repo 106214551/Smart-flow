@@ -1,12 +1,11 @@
+<!DOCTYPE html>
 <!--
   about.html - About Us page
-  Group: G02 - Smart City Infrastructure Consultancy
+  Group: G02 - Smart City Infrastructure Consultancy (Smart-flow)
   Author: Khadija Boussaha (106237257)
   Description: Introduces the team: group and class details, each member's
-               contribution and quote, a group photo and a fun facts table.
-  Last updated: October 2026
+               contribution and quote, the group photo and a fun facts table.
 -->
-<!DOCTYPE html>
 
 <html lang="en">
 
@@ -14,18 +13,40 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="Learn about Smart-flow, its team and its smart city infrastructure focus." name="description" />
+  <meta content="about us, team, Smart-flow, G02, smart city, COS10026" name="keywords" />
+  <meta content="Khadija Boussaha" name="author" />
   <title>About | Smart-flow</title>
-  <link href="styles.css" rel="stylesheet" />
-  <link href="about.css" rel="stylesheet" />
+  <!-- External CSS: shared site styles, then the About page's own styles -->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/about.css" rel="stylesheet" />
   <!-- Embedded CSS example: limited page-specific styling; shared styles stay external. -->
   <style>
     .member-card dd strong {
       color: #087f88;
     }
+
+    /* Skip link: hidden off screen until a keyboard user tabs to it */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      z-index: 100;
+      padding: .5rem 1rem;
+      background: #ffffff;
+      color: #102b4d;
+      border-radius: .5rem;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Skip link lets keyboard and screen-reader users jump past the menu -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <!-- Shared header and navigation (same on every page) -->
   <header class="site-header">
     <div class="container header-content">
       <a aria-label="Smart-flow home" class="brand" href="index.html">
@@ -44,12 +65,14 @@
     </div>
   </header>
   <main class="container page-main about-page" id="main-content">
+    <!-- Hero banner introducing the company -->
     <section aria-labelledby="about-title" class="page-hero">
+      <!-- Inline CSS example -->
       <p class="eyebrow" style="margin-bottom: 0.8rem;">ABOUT SMART-FLOW</p>
       <h1 id="about-title">Smarter systems.<br /><span>Stronger communities.</span></h1>
       <p>Smart-flow is a smart city infrastructure consultancy focused on connected transport, energy monitoring and
         practical urban services.</p>
-    </section>
+    </section><!-- Group details: NESTED LIST (brief requirement) -->
     <section aria-labelledby="group-heading" class="content-section about-group-section">
       <h2 id="group-heading">Our Group</h2>
       <ul class="group-info">
@@ -62,7 +85,7 @@
           </ul>
         </li>
       </ul>
-    </section>
+    </section><!-- Members: DEFINITION LIST with contributions and quotes (brief requirement) -->
     <section aria-labelledby="members-heading" class="content-section about-members-section">
       <h2 id="members-heading">Members, Contributions and Quotes</h2>
       <dl class="members">
@@ -103,39 +126,40 @@
         </div>
         <div class="member-card">
           <dt>Khadija Boussaha <span class="student-id">106237257</span></dt>
-          <dd><strong>Contribution:</strong> About page (about.html) and its CSS, including the team details, group
-            photo and fun facts table. Also set up and managed the team's Jira board (epics, user stories, tasks and
-            sprints).</dd>
+          <dd><strong>Contribution:</strong> About page (about.html): its content and structure, including the team
+            details, group photo and fun facts table, and the first draft of its CSS. Also set up and managed the team's
+            Jira board (epics, user stories, tasks and sprints).</dd>
           <dd>
             <blockquote dir="rtl" lang="ar-DZ">
-              <p>[Quote in first language]</p>
+              <p>قريني وانا سيدك</p>
             </blockquote>
-            <p class="translation">Translation (Algerian Arabic): "[English translation]"</p>
+            <p class="translation">Translation (Algerian Arabic): "Teach me, and I will become your master." A student
+              who is taught well can one day surpass the teacher.</p>
           </dd>
         </div>
         <div class="member-card">
-          <dt>Sara Kneina <span class="student-id">[Student ID]</span></dt>
-          <dd><strong>Contribution:</strong> Shared stylesheet (styles.css), including the site-wide colours,
-            navigation, responsive layout and accessibility styles, plus final validation checks and GitHub Pages
-            deployment.</dd>
+          <dt>Sara Kneina <span class="student-id">106214551</span></dt>
+          <dd><strong>Contribution:</strong> Shared CSS (styles.css) and the page-specific CSS files, the embedded and
+            inline CSS, GitHub repository setup and GitHub Pages deployment.</dd>
           <dd>
             <blockquote dir="rtl" lang="ar">
-              <p>[Quote in first language]</p>
+              <p>وعسى أن تكرهوا شيئًا وهو خير لكم وعسى أن تحبوا شيئًا وهو شر لكم</p>
             </blockquote>
-            <p class="translation">Translation: "[English translation]"</p>
+            <p class="translation">Translation (Arabic): "Perhaps you dislike something and it is good for you, and
+              perhaps you love something and it is bad for you." (<cite>Qur'an</cite>, Surah Al-Baqarah, 2:216)</p>
           </dd>
         </div>
       </dl>
-    </section>
+    </section><!-- Group photo: FIGURE with caption, under 300KB (brief requirement) -->
     <section aria-labelledby="photo-heading" class="content-section about-photo-section">
       <h2 id="photo-heading">Our Team Photo</h2>
       <figure class="group-photo">
-        <img alt="The five Smart Flow team members standing together and smiling" height="533"
-          src="images/group-photo.jpg" width="800" />
+        <img alt="The five Smart Flow team members sitting around a table, working together on their laptops"
+          height="1200" src="images/group-photo.jpg" width="900" />
         <!-- Inline CSS example (required on every page) -->
         <figcaption style="font-style: italic;">The Smart Flow team (G02), October 2026.</figcaption>
       </figure>
-    </section>
+    </section><!-- Fun facts: TABLE with caption; scope helps screen readers (brief requirement) -->
     <section aria-labelledby="facts-heading" class="content-section about-facts-section">
       <h2 id="facts-heading">Fun Facts</h2>
       <div aria-labelledby="facts-caption" class="table-wrapper" role="region" tabindex="0">
@@ -176,14 +200,14 @@
             </tr>
             <tr>
               <th scope="row">Sara Kneina</th>
-              <td>[Dream job]</td>
-              <td>[Snack]</td>
-              <td>[Hometown]</td>
+              <td>Still exploring</td>
+              <td>Toblerone</td>
+              <td>Syria and Algeria</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </section>
+    </section><!-- Acknowledgement of Country, explained in context (brief requirement) -->
     <section aria-labelledby="country-heading" class="content-section acknowledgement about-country-section">
       <h2 id="country-heading">Acknowledgement of Country</h2>
       <p>
@@ -207,17 +231,18 @@
         <li>encouraging applications from Aboriginal and Torres Strait Islander peoples for all roles;</li>
         <li>designing digital services that are accessible to everyone in the community.</li>
       </ul>
-    </section>
+    </section><!-- Acknowledgements, GenAI credit and APA 7 references -->
     <section aria-labelledby="credits-heading" class="content-section about-credits-section">
       <h2 id="credits-heading">Acknowledgements and References</h2>
       <p>Group photo: taken by the Smart Flow team. Used with the permission of all members.</p>
       <!-- GenAI acknowledgement: the brief states that not crediting GenAI is plagiarism -->
       <h3>Use of generative AI</h3>
       <p>
-        I used Claude, an AI assistant made by Anthropic, for guidance while building this page. It
-        explained the assessment requirements, showed me how to set up my project in VS Code and Jira,
-        and provided a starting draft of the HTML and CSS, which I then reviewed, edited, tested and
-        learned to explain. The team members' details, quotes and photo are our own.
+        We used Claude, an AI assistant made by Anthropic, mainly as a learning aid. It helped us understand the
+        assessment requirements,
+        explained how the code works, guided us through setting up VS Code, Jira and GitHub, and helped us identify and
+        fix mistakes.
+        We reviewed, modified and tested our work ourselves. The team members’ details, quotes and photo are our own.
       </p>
       <h3>References (APA 7)</h3>
       <!-- APA 7: references listed in alphabetical order by author -->
@@ -239,6 +264,7 @@
       </ul>
     </section>
   </main>
+  <!-- Shared footer with GitHub, Jira, live site and email links -->
   <footer class="site-footer">
     <div class="container footer-content">
       <a class="footer-brand" href="index.html">Smart<span>-flow</span></a>
