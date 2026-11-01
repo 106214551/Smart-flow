@@ -4,8 +4,8 @@ A static recruitment website for Smart-flow, a smart city infrastructure consult
 COS10026 Applied Web Project Part 1 — Group G02.
 
 ## Links
-- Live site: [GitHub Pages link]
-- Jira board: [Jira link]
+- Live site: https://106214551.github.io/Smart-flow/
+- Jira board: https://boussahakhadija76.atlassian.net/jira/software/projects/SFG/boards/34
 - Repository: https://github.com/106214551/Smart-flow
 
 ## Pages
